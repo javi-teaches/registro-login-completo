@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container">
+		<a class="navbar-brand" href="#">MERN Store</a>
+	
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div class="collapse navbar-collapse" id="mainNavbar">
+			<ul class="navbar-nav me-auto">
+				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="/">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="/">Products</a></li>
+			</ul>
+			<ul class="navbar-nav align-items-center">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="/images/avatars/default.png" width="40" style="border-radius: 100%;">
+						Hi User
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="/user/profile">My profile</a>
+						<li><hr class="dropdown-divider"></li>
+						<a class="dropdown-item" href="/user/logout">Logout</a>
+					</ul>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="/user/register">Register</a></li>
+				<li class="nav-item"><a class="nav-link" href="/user/login">Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head'); %>
+<body>
+	<%- include('partials/navbar'); %>
+	
+	<!-- Register-Form -->
+	<div class="container my-5">
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<h2>Formulario de registro</h2>
+	
+				<form method="POST" action="/user/register">
+					<div class="row">
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Nombre completo:</b></label>
+								<input type="text" name="full_name" class="form-control">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Correo electrónico:</b></label>
+								<input type="text" name="email"class="form-control">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Password:</b></label>
+								<input type="password" name="password" class="form-control">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Repetir Password:</b></label>
+								<input type="password" name="re_password" class="form-control">
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>País de nacimiento:</b></label>
+								<select name="country" class="form-control">
+									<option value="">Elegí un país</option>
+									<%  
+										let countries = [
+											{code: 'Arg', name: 'Argentina'},
+											{code: 'Bol', name: 'Bolivia'},
+											{code: 'Bra', name: 'Brasil'},
+											{code: 'Col', name: 'Colombia'},
+											{code: 'Chi', name: 'Chile'},
+											{code: 'Ecu', name: 'Ecuador'},
+											{code: 'Par', name: 'Paraguay'},
+											{code: 'Per', name: 'Perú'},
+											{code: 'Uru', name: 'Uruguay'},
+											{code: 'Ven', name: 'Venezuela'},
+										];
+									%>
+									<% for (const oneCountry of countries) { %>
+										<option value="<%= oneCountry.code %>"> <%= oneCountry.name %> </option>
+									<% } %>
+								</select>
+								<div class="invalid-feedback">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Imagen de perfil:</b></label>
+								<input class="form-control" type="file" name="avatar">
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+						<div class="col-12 my-3">
+							<button type="submit" class="btn btn-primary">Registrarse</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //Register-Form -->
+	
+	<%- include('partials/footer'); %>
+</body>
+</html>
