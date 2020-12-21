@@ -38,29 +38,11 @@
 						</div>
 						<div class="col-md-6 my-1">
 							<div class="form-group">
-								<label><b>Repetir Password:</b></label>
-								<input type="password" name="re_password" class="form-control">
-								<div class="invalid-feedback"></div>
-							</div>
-						</div>
-						<div class="col-md-6 my-1">
-							<div class="form-group">
 								<label><b>País de nacimiento:</b></label>
-								<select name="country" class="form-control">
+								<select name="country" class="form-select">
 									<option value="">Elegí un país</option>
 									<%  
-										let countries = [
-											{code: 'Arg', name: 'Argentina'},
-											{code: 'Bol', name: 'Bolivia'},
-											{code: 'Bra', name: 'Brasil'},
-											{code: 'Col', name: 'Colombia'},
-											{code: 'Chi', name: 'Chile'},
-											{code: 'Ecu', name: 'Ecuador'},
-											{code: 'Par', name: 'Paraguay'},
-											{code: 'Per', name: 'Perú'},
-											{code: 'Uru', name: 'Uruguay'},
-											{code: 'Ven', name: 'Venezuela'},
-										];
+										let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];
 									%>
 									<% for (const oneCountry of countries) { %>
 										<option value="<%= oneCountry.code %>"> <%= oneCountry.name %> </option>
