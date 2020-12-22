@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.urlencoded({ extended: false }));
+
 app.use(express.static('./public'));
 app.listen(3000, () => console.log('Servidor levantado en el puerto 3000'));
 
