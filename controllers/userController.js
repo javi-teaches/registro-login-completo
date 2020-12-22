@@ -10,8 +10,11 @@ const controller = {
 		if (resultValidation.errors.length > 0) {
 			return res.render('userRegisterForm', {
 				errors: resultValidation.mapped(),
+				oldData: req.body
 			});
 		}
+
+		return res.send('Ok, las validaciones se pasaron y no tienes errores');
 	},
 	login: (req, res) => {
 		return res.render('userLoginForm');
