@@ -16,8 +16,11 @@
 							<div class="form-group">
 								<label><b>Correo electrónico:</b></label>
 								<input type="text" name="email" class="form-control">
-								<div class="invalid-feedback">
-								</div>
+								<% if (locals.errors && errors.email) { %>
+									<div class="text-danger">
+										<%= errors.email.msg %>
+									</div>
+								<% } %>
 							</div>
 						</div>
 						<div class="col-md-6 my-2">
@@ -36,7 +39,7 @@
 							</div>
 						</div>
 						<div class="col-12 my-3">
-							<button type="submit" class="btn btn-primary">Registrarse</button>
+							<button type="submit" class="btn btn-primary">Loguearme</button>
 						</div>
 					</div>
 				</form>

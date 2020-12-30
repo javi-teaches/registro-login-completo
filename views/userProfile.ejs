@@ -8,11 +8,11 @@
 	<div class="container" style="margin-top: 40px;">
 		<div class="row">
 			<div class="col-md-3">
-				<h2>Hi User</h2>
-				<img src="/images/avatars/default.png">
+				<h2>Hi <%= user.fullName %> </h2>
+				<img src="/images/avatars/<%= user.avatar %> ">
 				<br>
 				<br>
-				<div class="alert alert-success">user@email.com</div>
+				<div class="alert alert-success"><%= user.email %> </div>
 			</div>
 		</div>
 	</div>
