@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container">
-		<a class="navbar-brand" href="#">MERN Store</a>
+		<a class="navbar-brand" href="#">M-Business</a>
 	
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -8,9 +8,9 @@
 	
 		<div class="collapse navbar-collapse" id="mainNavbar">
 			<ul class="navbar-nav me-auto">
-				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="/">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="/">Products</a></li>
+				<li class="nav-item"><a class="nav-link" href="/">Servicios</a></li>
+				<li class="nav-item"><a class="nav-link" href="/">Acerca de</a></li>
+				<li class="nav-item"><a class="nav-link" href="/">Contacto</a></li>
 			</ul>
 			<ul class="navbar-nav align-items-center">
 				<% if (locals.isLogged) { %>
@@ -20,15 +20,15 @@
 							Hi <%= locals.userLogged.fullName %> 
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="/user/profile">My profile</a>
+							<a class="dropdown-item" href="/user/profile"><i class="fa-solid fa-id-badge"></i> Mi perfil</a>
 							<li><hr class="dropdown-divider"></li>
-							<a class="dropdown-item" href="/user/logout">Logout</a>
+							<a class="dropdown-item" href="/user/logout"><i class="fa-solid fa-user-xmark"></i> Salir</a>
 						</ul>
 					</li>
 				<% } else { %>
-					<li class="nav-item"><a class="nav-link" href="/user/register">Register</a></li>
-					<li class="nav-item"><a class="nav-link" href="/user/login">Login</a></li>
-				<% } %>
+					<li class="nav-item"><a class="nav-link" href="/user/register"><i class="fa-solid fa-user-plus"></i> Registarse</a></li>
+					<li class="nav-item"><a class="nav-link" href="/user/login"><i class="fa-solid fa-right-to-bracket"></i> Inicia sesión</a></li>
+				<% } %> 
 			</ul>
 		</div>
 	</div>
